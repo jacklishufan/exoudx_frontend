@@ -5,7 +5,9 @@
     :leftShow="false"
     :rightShow="false"
 >Exodus</nut-navbar>
-
+    <transition class="container" name="fade">
+<router-view></router-view>
+    </transition>
     <Tabbar
       class="tab-label"
   :tabbar-list="tabList"
@@ -43,10 +45,10 @@
     data() {
       return {
         tabList:[
-          {'tabTitle':"HomePage", "icon":"icon-app-homepage"},
-          {'tabTitle':"Policies","icon":"icon-Globe"},
-          {'tabTitle':"Planer","icon":"icon-map"},
-          {'tabTitle':"Cases","icon":"icon-stats-lines-pipes"},
+          {'tabTitle':"HomePage", "icon":"icon-app-homepage","href":"#/menu/home"},
+          {'tabTitle':"Policies","icon":"icon-Globe","href":"#/menu/policies"},
+          {'tabTitle':"Planer","icon":"icon-map","href":"#/menu/planner"},
+          {'tabTitle':"Cases","icon":"icon-stats-lines-pipes","href":"#/menu/virus"},
           ],
       }
     }
